@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8">
+<title>Home</title>
+
+	<!-- ===============Bootstrap links======================== -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link
+	href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;900&display=swap"
+	rel="stylesheet">
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+	rel="stylesheet">
+<link
+	href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+	rel="stylesheet">
+	
+	<!-- ===============index.css file======================== -->
+	
+<link href="css/index.css" rel="stylesheet">
+
+
+</head>
+<body>
+
+
+
+	<!-- ====================== Navigation bar Section ================================== -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+		<div class="container">
+			<a class="navbar-brand" href="#"><span>BANK</span>APPLICATION</a>
+			<button aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation" class="navbar-toggler"
+				data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse"
+				type="button">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+					<li class="nav-item"><a class="nav-link" href="/index">Home</a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="#aboutus">About
+							Us</a></li>
+					<li class="nav-item"><a class="nav-link" href="/login">Make
+							Payments</a></li>
+					<li class="nav-item"><a class="nav-link" href="#contact">Contact</a>
+					</li>
+					<li class="nav-item"><a class="getstarted" href="/login">Get
+							Started</a></li>
+				</ul>
+
+			</div>
+		</div>
+	</nav>
+	
+	<!-- =============================End Navigation bar Section============================== -->
+	
+	
+	<!-- ============================= Slide Section ========================================== -->
+	
+	<div class="carousel slide" data-bs-ride="carousel"
+		id="carouselExampleIndicators">
+		<div class="carousel-indicators">
+			<button aria-label="Slide 1" class="active" data-bs-slide-to="0"
+				data-bs-target="#carouselExampleIndicators" type="button"></button>
+			<button aria-label="Slide 2" data-bs-slide-to="1"
+				data-bs-target="#carouselExampleIndicators" type="button"></button>
+			<button aria-label="Slide 3" data-bs-slide-to="2"
+				data-bs-target="#carouselExampleIndicators" type="button"></button>
+		</div>
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<img alt="..." class="d-block w-100"
+					src="images/MicrosoftTeams-image.png">
+				<div class="carousel-caption">
+					<h5 class="animated fadeInDown" style="animation-delay: 1s">WELCOME</h5>
+					<p class="animated fadeInUp d-none d-md-block"
+						style="animation-delay: 2s">to Our Bank Application</p>
+					<p class="animated fadeInUp" style="animation-delay: 3s">
+						<a href="/login">Signin</a>
+					</p>
+				</div>
+			</div>
+			<div class="carousel-item">
+				<img alt="..." class="d-block w-100"
+					src="images/MicrosoftTeams-image (1).png">
+				<div class="carousel-caption">
+					<h5 class="animated fadeInDown" style="animation-delay: 1s"></h5>
+					<p class="animated fadeInUp d-none d-md-block"
+						style="animation-delay: 2s">“Banking is necessary, banks are
+						not.”</p>
+					<p class="animated fadeInUp" style="animation-delay: 3s">
+						<a href="/register">Signup</a>
+					</p>
+				</div>
+			</div>
+			<div class="carousel-item">
+				<img alt="..." class="d-block w-100"
+					src="images/MicrosoftTeams-image (2).png">
+				<div class="carousel-caption">
+					<h5 class="animated fadeInDown" style="animation-delay: 1s"></h5>
+					<p class="animated fadeInUp d-none d-md-block"
+						style="animation-delay: 2s">Learn more About us</p>
+					<p class="animated fadeInUp" style="animation-delay: 3s">
+						<a href="#aboutus">About us</a>
+					</p>
+				</div>
+			</div>
+		</div>
+		<button class="carousel-control-prev" data-bs-slide="prev"
+			data-bs-target="#carouselExampleIndicators" type="button">
+			<span aria-hidden="true" class="carousel-control-prev-icon"></span> <span
+				class="visually-hidden">Previous</span>
+		</button>
+		<button class="carousel-control-next" data-bs-slide="next"
+			data-bs-target="#carouselExampleIndicators" type="button">
+			<span aria-hidden="true" class="carousel-control-next-icon"></span> <span
+				class="visually-hidden">Next</span>
+		</button>
+
+	</div>
+	
+	<!-- =======================================End slide Section=========================================== -->
+	
+	
+	<!-- ============================== About Us Section ========================================= -->
+	
+	<br>
+
+	<section id="aboutus" class="about"
+		style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+		<div class="container" data-aos="fade-up">
+			<br>
+			<br>
+			<center>
+				<div class="section-title">
+					<h2>About Us</h2>
+			</center>
+		</div>
+		<div class="row content" style="align-items: center;">
+			<div class="col-lg-6">
+				<p style="padding-left: 190px;">
+					&nbsp; &nbsp; &nbsp; &nbsp;<b>OUR TEAM</b>
+				</p>
+				<ul style="list-style-type: none;">
+					<li style="color: black; padding-left: 200px;">CHITHRA PRIYA.G</li>
+					<li style="color: black; padding-left: 200px;">ASHWINI SUDHAKAR SHINDE</li>
+					<li style="color: black; padding-left: 200px;">PUTTAPARTHI MOUNIKA</li>
+					<li style="color: black; padding-left: 200px;">AISWARYA.K</li>
+					<li style="color: black; padding-left: 200px;">SUDHARSAN.V</li>
+
+				</ul>
+			</div>
+			<div class="col-lg-6 pt-4 pt-lg-0">
+
+				<p>This Application is used to create new Savings and Current
+					Account. This Application gives many features to access the
+					account.</p>
+
+			</div>
+		</div>
+		<br>
+		<br>
+		</div>
+	</section>
+	
+	<!-- ==================================================End About Us Section============================================= -->
+	
+	<!-- =================================== Contact us Section============================================ -->
+	
+	<br>
+	<br>
+	<div class="contact_info"
+		style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"
+		id="contact">
+		<center>
+			<h2>Contact Us</h2>
+		</center>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-10 offset-lg-1">
+					<div
+						class="contact_info_container d-flex flex-lg-row flex-column justify-content-between align-items-between">
+
+						<!-- Contact Item -->
+						<div
+							class="contact_info_item d-flex flex-row align-items-center justify-content-start">
+							<div class="contact_info_image">
+								<img src="https://img.icons8.com/office/24/000000/iphone.png"
+									alt="">
+							</div>
+							<div class="contact_info_content">
+								<div class="contact_info_title">Phone</div>
+								<div class="contact_info_text">+91 9876 543 219</div>
+							</div>
+						</div>
+
+						<!-- Contact Item -->
+						<div
+							class="contact_info_item d-flex flex-row align-items-center justify-content-start">
+							<div class="contact_info_image">
+								<img
+									src="https://img.icons8.com/ultraviolet/24/000000/filled-message.png"
+									alt="">
+							</div>
+							<div class="contact_info_content">
+								<div class="contact_info_title">Email</div>
+								<div class="contact_info_text">bankapp@gmail.com</div>
+							</div>
+						</div>
+
+						<!-- Contact Item -->
+						<div
+							class="contact_info_item d-flex flex-row align-items-center justify-content-start">
+							<div class="contact_info_image">
+								<img
+									src="https://img.icons8.com/ultraviolet/24/000000/map-marker.png"
+									alt="">
+							</div>
+							<div class="contact_info_content">
+								<div class="contact_info_title">Address</div>
+								<div class="contact_info_text">298,Menlo Park,Chennai</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+		<br>
+	</div>
+	<br>
+	
+	<!-- =========================================End Contact us section============================================= -->
+	
+	
+	<!-- ========================================= Footer Section =============================================== -->
+	
+	<div class="mydiv">
+		<br> 
+		<div style="display: flex;    justify-content:space-around;
+    padding-left: 15px;
+    padding-right: 15px;">
+		
+		<a
+			style=" text-decoration: none; color: white;"
+			href="/register">Signup</a> <a href="/login"
+			style="text-decoration: none; color: white;">Signin</a> <a
+			style=" text-decoration: none; color: white;"
+			href="#aboutus">About us</a>
+			
+		</div>
+		<hr>
+		<p>Copyright@2022
+		</p>
+	</div>
+
+	<!-- =========================================End Footer Section=================================================== -->
+	
+	
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+		
+	</script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js">
+		
+	</script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js">
+		
+	</script>
+
+
+</body>
+</html>

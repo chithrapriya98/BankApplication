@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="vendor/jquery-ui/jquery-ui.min.css">
+
+    <!-- Main css -->
+
+    <link rel="stylesheet" href="css/register.css">
+    <script src="newacc.js"></script>
+</head>
+<body style="background-image: url('images/backnav.jpg');">
+<center><h1>Create New Account</h1></center>
+    <div class="main">
+
+        <section class="signup">
+             <img src="images/backnaav.jpg" alt=""> 
+            <div class="container">
+                <div class="signup-content">
+                    <form method="POST" id="signup-form" class="signup-form" onsubmit="myFunction()" name="newacc" th:action="@{/process_register}" th:object="${user}" >
+                    <div th:if="${mail != null}" class="alert alert-danger notification" role="alert" style="background-color: red; color: white;">
+   								<center><p th:text="${mail}" style="color: white"></p><p></p></center>
+							</div>
+                        <div class="form-row">
+                            <div class="form-group">
+                           <!--  <input type="hidden" name="accountno" th:field="*{accountno}" th:value="${unique}" ></input>--> 
+                                <label for="first_name">First name<span style="color:red;">*</span></label>
+                                <input type="text" class="form-input" name="first_name" id="first_name" placeholder="First Name" th:field="*{firstName}"
+        pattern="[a-zA-Z ]+"
+        title="Username should only contain Alphabet e.g. John" required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="last_name">Last name<span style="color:red;">*</span></label>
+                                <input type="text" class="form-input" name="last_name" id="last_name" placeholder="ENTER LAST NAME" th:field="*{lastName}"  pattern="[a-zA-Z ]+" title="Username should only contain Alphabet e.g.Smith" required/>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group form-icon">
+                                <label for="birth_date">Birth date<span style="color:red;">*</span></label>
+                                <input type="date" class="form-input" name="birth_date" id="birth_date" placeholder="MM-DD-YYYY" th:field="*{dateOfBirth}" required/>
+                            </div>
+                            <div class="form-radio">
+                                <label for="gender">Gender<span style="color:red;">*</span></label>
+                                <div class="form-flex">
+                                    <input type="radio" name="gender"  th:field="*{gender}" value="male" id="male" checked="checked" required/>
+                                    <label for="male">Male</label>
+    
+                                    <input type="radio" name="gender" th:field="*{gender}" value="female" id="female" required/>
+                                    <label for="female">Female</label>
+				
+                                </div>
+                            </div>
+                        </div>
+			<div class="form-group">
+			<label for="Address">Address<span style="color:red;">*</span></label>
+			<input type="textarea"  class="form-input" name="address" id="address" th:field="*{address}" placeholder="Enter Your Address" required/>
+			</div>
+			<div class="form-row">
+			
+                        <div class="form-group">
+                            
+			    <label for="door">PinCode<span style="color:red;">*</span></label>
+                            <input type="number"  class="form-input" name="picode" id="pincode" placeholder="ENTER INCODE" th:field="*{pinCode}" minlength="6" maxlength="6" title="Please enter Valid(6-Digits) pincode. e.g: 612345 " required/>
+                        </div>
+			<div class="form-group">
+                            <label for="city">City<span style="color:red;">*</span></label>
+                            <input type="text"  class="form-input" name="city" id="city" th:field="*{city}" placeholder="City" title="Please Enter City"required/>
+                        </div>
+			<!-- <div class="form-group">
+                            <label for="city">State<span style="color:red;">*</span></label>
+                            <input type="text"  class="form-input" name="state" id="state" required/>
+                        </div>
+			</div> -->
+            <div class="form-group">
+                <label for="city">State<span style="color:red;">*</span></label>
+                <select class="form-control" id="inputState" th:field="*{state}">
+                    <option value="SelectState">Select State</option>
+                     
+                  	<option value="Andra Pradesh" >Andra Pradesh</option>
+                    <option value="Arunachal Pradesh" >Arunachal Pradesh</option>
+                    <option value="Assam" >Assam</option>
+                    <option value="Bihar">Bihar</option>
+                    <option value="Chhattisgarh">Chhattisgarh</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Gujarat">Gujarat</option>
+                    <option value="Haryana">Haryana</option>
+                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                    <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                    <option value="Jharkhand">Jharkhand</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="Madya Pradesh">Madya Pradesh</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Manipur">Manipur</option>
+                    <option value="Meghalaya">Meghalaya</option>
+                    <option value="Mizoram">Mizoram</option>
+                    <option value="Nagaland">Nagaland</option>
+                    <option value="Orissa">Orissa</option>
+                    <option value="Punjab">Punjab</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                    <option value="Sikkim">Sikkim</option>
+                    <option value="Tamil Nadu">Tamil Nadu</option>
+                    <option value="Telangana">Telangana</option>
+                    <option value="Tripura">Tripura</option>
+                    <option value="Uttaranchal">Uttaranchal</option>
+                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                    <option value="West Bengal">West Bengal</option>
+                    <!--  <option disabled style="background-color:#aaa; color:#fff">UNION Territories</option> -->
+                    <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                    <option value="Chandigarh">Chandigarh</option>
+                    <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                    <option value="Daman and Diu">Daman and Diu</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Lakshadeep">Lakshadeep</option>
+                    <option value="Pondicherry">Pondicherry</option>
+                  </select>
+            </div>
+            </div>
+			<div class="form-row">
+                            <div class="form-group">
+                                <label for="Email">Email ID<span style="color:red;">*</span></label>
+                                <input type="email" class="form-input" name="email" placeholder="ENTER MAIL ID" id="email" th:field="*{email}" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please Enter Correct Email id e.g: bank@gmail.com "required/>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="mobile">Mobile Number<span style="color:red;">*</span></label>
+                                <input type="number" class="form-input" name="mobno" id="mobno" placeholder="ENTER MOBILE NO" value="" th:field="*{phone}" pattern="[6789][0-9]{9}" title="Please enter valid phone number" required/>
+                            </div>
+                        </div>
+			<div class="form-row">
+                            <div class="form-group">
+                                <label for="first_name">Aadhar Number<span style="color:red;">*</span></label>
+                                <input type="number" class="form-input" name="addharno" id="addharno" placeholder="AADHAR NO" th:field="*{aadharNo}" pattern="^[2-9]{1}[0-9]{3}\\s[0-9]{4}\\s[0-9]{4}$" title="Please Enter Valid Aadhar Number e.g: 3675 9834 6015" required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="last_name">PAN Number<span style="color:red;">*</span></label>
+                                <input type="text" class="form-input" name="panno" id="panno" th:field="*{panNo}" placeholder="PAN CARD" pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}" title="Please Enter Valid PAN Number e.g: BNZAA2318J " required/>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="password">UserName<span style="color:red;">*</span></label>
+                                <input type="text" class="form-input" name="username" id="username" th:field="*{userName}" placeholder="User Name" pattern="[a-zA-Z ]+"
+                                title="Username should only contain Alphabet e.g. John" required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">password<span style="color:red;">*</span></label>
+                                <input type="password" class="form-input" name="password" id="password" th:field="*{password}" placeholder="Password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" title="Please Enter Strong Password with  &#010;  =>minimum 8 characters. &#010; =>alteast one special charcter(@!#$%).  &#010;  =>should have alteast one number,uppercase and lowercase Letters."  required/>
+                            </div>
+                        </div>
+                       <!--  <input type="hidden" name="accounttype" th:field="*{accounttype}" value="Savings Account" ></input>
+                        <input type="hidden" name="balance" th:field="*{balance}" value="0" ></input>--> 
+                        <div class="form-group">
+							<label for="Address">Type of Account<span style="color:red;">*</span></label>
+								<select class="form-control" id="inputState" th:field="*{accountType}">
+								<option value="Savings Account">------------------------------------SELECT ACCOUNT TYPE----------------------------------------</option>
+                    <option value="Savings Account">Savings Account</option>
+                    <option value="Current Account">Current Account</option>
+                    </select>
+						</div>
+                         <div class="form-group">
+                           <input type="submit" name="submit" id="submit" class="form-submit" value="Open Now"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    
+    
+</body>
+</html>

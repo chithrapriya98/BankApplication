@@ -1,0 +1,24 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Registration Success</title>
+<!-- ===================================== Bootstrap  links ========================== -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body><br><br><br>
+<center><div>
+
+<!-- ========================== Registered Sucess section==================================== -->
+
+	<h1>Your Account is Sucessfully Created......!</h1>
+	<h2>Welcome to Our Bank Application <h3 style="color:#6e6b80" th:text="${username}"></h3></h2><br>
+	<h2>Your Generated Account Number : <h3 style="color:#6e6b80" th:text="${accountno}"></h3></h2>
+	<a  class="btn btn-primary" href="/index" >Back</a>
+</div></center>
+
+<!-- ============================== section End ========================================= -->
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+  <meta charset="UTF-8">
+  <!-- ======================================= Home page for users ================================== -->
+ 
+    <title>Home</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <!-- ============================================ Bootstrap Links======================= -->
+    
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" rel="stylesheet">
+     <link  href="css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="css/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+   
+   <!-- ======================================= Css Links ================================== -->
+   
+ 
+  
+  <!-- ======================================= Css style ================================== -->
+   
+  <style type="text/css">
+  
+  h2{
+  text-align: center;
+  }
+  </style>
+</head>
+<body>
+<!-- ======================================= including navbar  ================================== -->
+   
+ <div th:insert="navbar :: navbar">  </div>
+
+<!-- ======================================= welcome message  ================================== -->
+
+<h2 style="padding-top: 100px;">Welcome to our Bank Application <span th:text="${session.name}"></span></h2>
+
+<!-- ======================================= including footer  ================================== -->
+ 
+ <div style="    width: -webkit-fill-available;
+    position: absolute;
+    bottom: 0px;" th:insert="footer :: footer">  </div>
+</body>
+</html>

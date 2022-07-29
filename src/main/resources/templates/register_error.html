@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Registration Error</title>
+<style>
+a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: red;
+}
+</style>
+</head>
+<body><br><br><br><br><br>
+<h1><center>Sorry, Something went wrong.<br>
+<span th:text={error}></span><br/></center></h1>
+<br><br>
+<a href="/register" class>Back</a>
+</body>
+</html>

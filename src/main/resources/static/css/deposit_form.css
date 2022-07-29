@@ -1,0 +1,116 @@
+@charset "UTF-8";
+body {
+	color:#fff;
+	background:#63738a;
+	font-family:'Roboto',
+	sans-serif;
+	
+}
+label{
+	text-shadow:black;
+	font-weight: bold;
+	color: black;
+}
+.form-control {
+	height:40px;
+	box-shadow:none;
+	color:black;
+	text-align: center;
+	
+}
+.form-control:focus {
+	border-color:#5cb85c;
+	
+}
+.form-control, .btn {
+	border-radius:3px;
+	
+}
+.deposit-form {
+	width:450px;
+	margin:0auto;
+	padding:30px0;
+	font-size:15px;
+	
+}
+.deposit-form h2 {
+	color:black;
+	margin:0015px;
+	position:relative;
+	text-align:center;
+	
+}
+/*.deposit-form h2:before, .deposit-form h2:after {
+	content:"";
+	height:2px;
+	 width:30%;
+	 background:#d4d4d4;
+	 position:absolute;
+	top:50%;
+	z-index:2;
+	
+}
+.deposit-form h2:before {
+	left:0;
+	
+}
+.deposit-form h2:after {
+	right:0;
+	
+}*/
+.deposit-form .hint-text {
+	color:#999;
+	margin-bottom:30px;
+	text-align:center;
+	
+}
+.deposit-form form {
+	color:#999;
+	border-radius:3px;
+	margin-bottom:15px;
+	background:#f2f3f7;
+	box-shadow:0px2px2pxrgba(0,0, 0, 0.3);
+	padding:30px;
+	
+}
+.deposit-form .form-group {
+margin-bottom:20px;
+text-align: left;
+	
+}
+.deposit-form input[type="checkbox"] {
+	margin-top:3px;
+	
+}
+.deposit-form .btn {
+	font-size:16px;
+	font-weight:bold;
+	min-width:140px;
+	outline:none!important;
+	
+}
+.deposit-form .row div:first-child {
+	padding-right:10px;
+	
+}
+.deposit-form .row div:last-child {
+	padding-left:10px;
+	
+}
+.deposit-form a {
+	color:#fff;
+text-decoration:underline;
+	
+}
+.deposit-form a:hover {
+	text-decoration:none;
+	
+}
+.deposit-form form a {
+	color:#5cb85c;
+	text-decoration:none;
+	
+}
+deposit-form form a:hover {
+	text-decoration: underline;
+}

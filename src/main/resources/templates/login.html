@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<title>Login</title>
+<meta charset="utf-8">
+
+<!-- ===================login.css file============================== -->
+
+<link rel="stylesheet" href="css/login.css">
+
+
+<!-- ===================Bootstrap links============================== -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body style="background-image: url('https://plexcollectionposters.com/images/2021/05/16/background-images-for-login-page3bc68c53b0db224b.jpg');">
+
+<!-- ===============================================Login form Section====================================== -->
+
+<div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h2 class="text-center  mt-5" style="color:white;">Login </h2>
+        <br>
+         <div id="error" style="background-color: red; color: white; text-altext-align: center;" th:if="${error != null}"> <p th:text="${error}"></p></div>
+        <br> 
+        
+        <div class="text-center mb-5 text-dark"></div>
+        <div class="card my-5">
+        
+          <form class="card-body cardbody-color p-lg-5"  th:action="@{/login_process}" method="post">
+
+            <!--<div class="text-center">
+              <img src="https://cdn.pixabay.com/photo/2016/03/31/19/56/avatar-1295397__340.png" class="img-fluid profile-image-pic img-thumbnail rounded-circle my-3"
+                width="200px" alt="profile">
+            </div>-->
+
+            <div class="mb-3">
+              <input type="text" class="form-control"  id="email" name="email" placeholder="Email Id"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"  title="Please Enter Correct Email id e.g: bank@gmail.com "required>
+            </div>
+            <div class="mb-3">
+              <input type="password" class="form-control" id="password" name="pass" placeholder="Password"  pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" title="Please Enter Strong Password with  &#010;  =>minimum 8 characters. &#010; =>alteast one special charcter(@!#$%).  &#010;  =>should have alteast one number,uppercase and lowercase Letters."  required>
+            </div>
+            <div class="text-center"><button type="submit" class="btn btn-primary px-5 mb-5 w-100" >Login</button></div>
+            <div id="register" class="form-text text-center mb-5 text-dark">Not
+              Registered? <a href="register" class="text-dark fw-bold" > Create an
+                Account</a><br>
+                 <a type="button"  data-toggle="modal" data-target="#exampleModalCenter" style="font-style: italic;color: blue;">
+  forgot password
+</a>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  
+  <!-- ============================================Login form section End======================================================== -->
+  
+<!-- ============================================Forgot password Modal section======================================================== -->
+
+		<div class="modal fade" id="exampleModalCenter" tabindex="-1"
+			role="dialog" aria-labelledby="exampleModalCenterTitle"
+			aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLongTitle">Change Password</h5>
+						<button type="button" class="close" data-dismiss="modal"
+							aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div th:if="${notfound != null}">
+						<script>
+							alert("Sorry, Cann't find Email-ID \n Please enter correct Email-ID");
+						</script>
+					</div>
+					<!--<div th:if="${notfound != null}" class="alert alert-danger notification" role="alert" style="background-color: red; color: white;">
+   								<center><p th:text="${notfound}" style="color: white"></p></center></div> -->
+					<div class="modal-body">
+						<form th:action="@{/frogot_password}" method="post"
+							th:object="${user}">
+
+							Enter Email-Id &nbsp;: &nbsp;<input type="email" th:field="*{email}"><br>
+							<br>
+							<center><button type="submit" class="btn btn-primary">Reset
+								Password</button></center>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary"
+							data-dismiss="modal">Close</button>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+		
+		<!-- ============================================Forgot Password section End======================================================== -->
+</body>
+</html>
